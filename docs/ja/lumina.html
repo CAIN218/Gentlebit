@@ -73,70 +73,45 @@
             </nav>
 
             <div id="main">
-                <div class="project-card">
+                <div class="app-page">
                     <a href="index.html#apps" class="card-back-btn">← 戻る</a>
-                    <header>
-                        <h1>Lumina</h1>
-                        <span class="subtitle">複数モニターの明るさを、タスクバーからまとめて調整</span>
-                    </header>
-
-                    <div class="main-image"><img src="../images/lumina-icon.svg" alt="Lumina icon" /></div>
-
-                    <div class="content-section">
-                        <h3>Overview</h3>
-                        <p>Luminaは、DDC/CIに対応したモニターの明るさをタスクバーから調整できるWindows常駐アプリです。通知領域のアイコンをクリックすると、接続中のモニターごとにスライダーが並んだパネルが開きます。コントロールパネルを開いたり、モニター本体のボタンを押したりする手間がなくなります。</p>
+                    <div class="app-grid">
+                        <aside class="app-side">
+                            <img class="app-icon" src="../images/lumina-icon.svg" alt="Lumina icon" />
+                            <h1>Lumina</h1>
+                            <p class="app-sub">複数モニターの明るさを、タスクバーからまとめて調整</p>
+                            <a href="https://github.com/CAIN218/Lumina/releases/latest" class="action-btn app-dl" target="_blank" rel="noopener noreferrer">ダウンロード</a>
+                            <dl class="app-facts"><div><dt>バージョン</dt><dd>1.1.0</dd></div><div><dt>動作環境</dt><dd>Windows 10 / 11（64bit）、DDC/CI対応モニター</dd></div><div><dt>GitHub</dt><dd><a href="https://github.com/CAIN218/Lumina" target="_blank" rel="noopener noreferrer">CAIN218/Lumina</a></dd></div></dl>
+                            <nav class="app-nav" aria-label="On this page"><a href="#overview">Overview</a><a href="#features">Features</a><a href="#included">What's included</a></nav>
+                        </aside>
+                        <div class="app-body">
+                            <p class="app-lead" id="overview">Luminaは、DDC/CIに対応したモニターの明るさをタスクバーから調整できるWindows常駐アプリです。通知領域のアイコンをクリックすると、接続中のモニターごとにスライダーが並んだパネルが開きます。コントロールパネルを開いたり、モニター本体のボタンを押したりする手間がなくなります。</p>
+                            <div id="features">
+                    <div class="app-feat">
+                        <div class="app-feat-text"><strong>すっきりしたスライダーパネル</strong><p>通知領域のアイコンをクリックすると、モニターごとのスライダーが並んだパネルがフェードしながら表示されます。角の丸いパネルや、ドラッグ中につまみがほのかに光る演出、Yuga's lab のほかのアプリとそろえた落ち着いたダークデザインなど、見た目にもこだわりました。</p></div>
+                        <img class="feature-media" src="../images/lumina-panel.gif" alt="トレイのパネルでモニターごとに明るさを調整する様子" width="638" height="412" loading="lazy" />
                     </div>
-
-                    <div class="content-section">
-                        <h3>Features</h3>
-                        <div class="feature-grid">
-                            <div class="feature-item">
-                                <strong>すっきりしたスライダーパネル</strong>
-                                <p>通知領域のアイコンをクリックすると、モニターごとのスライダーが並んだパネルがフェードしながら表示されます。角の丸いパネルや、ドラッグ中につまみがほのかに光る演出、Yuga's lab のほかのアプリとそろえた落ち着いたダークデザインなど、見た目にもこだわりました。</p>
-                                <img class="feature-media" src="../images/lumina-panel.gif" alt="トレイのパネルでモニターごとに明るさを調整する様子" width="638" height="412" loading="lazy" />
-                            </div>
-                            <div class="feature-item">
-                                <strong>個別にも、まとめても調整できる</strong>
-                                <p>各スライダーはそれぞれのモニターを個別に調整します。右クリックメニューで「一斉に動かせるようにする」をオンにすると、全モニターをまとめて動かせるマスタースライダーが追加されます。</p>
-                            </div>
-                            <div class="feature-item">
-                                <strong>反応の遅いモニターでも操作は軽快</strong>
-                                <p>DDC/CIの通信は1回で最大100ミリ秒ほどかかることがあります。Luminaは各モニターの最新の目標値だけを保持して別スレッドで書き込むため、スライダーの動きが遅れません。</p>
-                            </div>
-                            <div class="feature-item">
-                                <strong>いつでも見えるトレイアイコン</strong>
-                                <p>タスクバーの明るさに合わせて、アイコンが明るい版と暗い版に自動で切り替わります。白いタスクバーでもアイコンが溶け込んで見えなくなることはありません。Windows のライト／ダークを切り替えても、すぐに追従します。</p>
-                            </div>
-                            <div class="feature-item">
-                                <strong>自動でアップデート</strong>
-                                <p>GitHub で新しいバージョンが公開されると通知でお知らせします。ワンクリックで更新でき、右クリックメニューで「自動アップデート」をオンにすれば自動で更新されます。「更新内容」で変更点を確認でき、メニューには今のバージョンも表示されます。</p>
-                                <img class="feature-media" src="../images/lumina-menu.gif" alt="右クリックメニューと「更新内容」の表示" width="648" height="512" loading="lazy" />
-                            </div>
-                            <div class="feature-item">
-                                <strong>英語と日本語に対応</strong>
-                                <p>右クリックメニューの「Language / 言語」から表示言語を選べます。初期設定は英語です。</p>
-                            </div>
-                        </div>
+                    <div class="app-feat flip">
+                        <div class="app-feat-text"><strong>自動でアップデート</strong><p>GitHub で新しいバージョンが公開されると通知でお知らせします。ワンクリックで更新でき、右クリックメニューで「自動アップデート」をオンにすれば自動で更新されます。「更新内容」で変更点を確認でき、メニューには今のバージョンも表示されます。</p></div>
+                        <img class="feature-media" src="../images/lumina-menu.gif" alt="右クリックメニューと「更新内容」の表示" width="648" height="512" loading="lazy" />
                     </div>
-
-                    <div class="content-section">
-                        <h3>What's included</h3>
-                        <div class="file-list">
-                            <ul>
+                    <div class="app-more">
+                        <div><strong>個別にも、まとめても調整できる</strong><p>各スライダーはそれぞれのモニターを個別に調整します。右クリックメニューで「一斉に動かせるようにする」をオンにすると、全モニターをまとめて動かせるマスタースライダーが追加されます。</p></div>
+                        <div><strong>反応の遅いモニターでも操作は軽快</strong><p>DDC/CIの通信は1回で最大100ミリ秒ほどかかることがあります。Luminaは各モニターの最新の目標値だけを保持して別スレッドで書き込むため、スライダーの動きが遅れません。</p></div>
+                        <div><strong>いつでも見えるトレイアイコン</strong><p>タスクバーの明るさに合わせて、アイコンが明るい版と暗い版に自動で切り替わります。白いタスクバーでもアイコンが溶け込んで見えなくなることはありません。Windows のライト／ダークを切り替えても、すぐに追従します。</p></div>
+                        <div><strong>英語と日本語に対応</strong><p>右クリックメニューの「Language / 言語」から表示言語を選べます。初期設定は英語です。</p></div>
+                    </div>
+                            </div>
+                            <section class="app-sec" id="included">
+                                <h2 class="app-label">What's included</h2>
+                                <div class="file-list"><ul>
                                 <li><code>Lumina.exe</code> — アプリ本体です。これ1つで動作し、ほかのソフトのインストールは不要です。</li>
                                 <li><code>README.md</code> — 使い方と、各メニュー項目の説明です（英語）。</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="download-area">
-                        <div class="action-container">
-                            <a href="https://github.com/CAIN218/Lumina/releases/latest" class="action-btn" target="_blank" rel="noopener noreferrer">ダウンロード</a>
-                        </div>
-                        <p class="download-meta">バージョン 1.1.0 ・ 動作環境: Windows 10 / 11（64bit）、DDC/CI対応モニター</p>
-                        <div class="warning-box">
-                            <h4>Windows SmartScreenの警告について</h4>
-                            <p>Luminaはコード署名をしていないため、初回起動時にWindows SmartScreenの警告が表示されることがあります。ダウンロードと実行は自己責任でお願いします。ソースコードはすべてGitHubで公開しているので、気になる方は事前にご確認ください。</p>
+                            </ul></div>
+                            </section>
+                            <section class="app-sec">
+                                <div class="app-warn"><strong>Windows SmartScreenの警告について</strong><p>Luminaはコード署名をしていないため、初回起動時にWindows SmartScreenの警告が表示されることがあります。ダウンロードと実行は自己責任でお願いします。ソースコードはすべてGitHubで公開しているので、気になる方は事前にご確認ください。</p></div>
+                            </section>
                         </div>
                     </div>
                 </div>

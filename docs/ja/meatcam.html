@@ -73,60 +73,40 @@
             </nav>
 
             <div id="main">
-                <div class="project-card">
+                <div class="app-page">
                     <a href="index.html#apps" class="card-back-btn">← 戻る</a>
-                    <header>
-                        <h1>MeatCam</h1>
-                        <span class="subtitle">生焼けの部分を、色ではなく模様で知らせるカメラアプリ</span>
-                    </header>
-
-                    <div class="main-image"><img src="../images/meatcam-icon.svg" alt="MeatCam icon" /></div>
-
-                    <div class="content-section">
-                        <h3>Overview</h3>
-                        <p>MeatCamは、色の見分けがつきにくい方でも肉の焼き加減を判断しやすくするiOSアプリです。カメラを肉に向けると、まだ生に見える部分に斜線が重ねて表示されます。色ではなく模様で知らせるので、赤と緑の区別がつきにくい方にもわかりやすくなっています。</p>
+                    <div class="app-grid">
+                        <aside class="app-side">
+                            <img class="app-icon" src="../images/meatcam-icon.svg" alt="MeatCam icon" />
+                            <h1>MeatCam</h1>
+                            <p class="app-sub">生焼けの部分を、色ではなく模様で知らせるカメラアプリ</p>
+                            <a href="https://github.com/CAIN218/meat-cam" class="action-btn app-dl" target="_blank" rel="noopener noreferrer">GitHubで見る</a>
+                            <dl class="app-facts"><div><dt>動作環境</dt><dd>iOS 17以降、カメラ付きのiPhone（ビルドにはXcodeが必要）</dd></div></dl>
+                            <nav class="app-nav" aria-label="On this page"><a href="#overview">Overview</a><a href="#features">Features</a><a href="#included">Source files</a></nav>
+                        </aside>
+                        <div class="app-body">
+                            <p class="app-lead" id="overview">MeatCamは、色の見分けがつきにくい方でも肉の焼き加減を判断しやすくするiOSアプリです。カメラを肉に向けると、まだ生に見える部分に斜線が重ねて表示されます。色ではなく模様で知らせるので、赤と緑の区別がつきにくい方にもわかりやすくなっています。</p>
+                            <div id="features">
+                    <div class="app-more">
+                        <div><strong>色だけに頼らない斜線表示</strong><p>生に見える部分を、薄いアンバー色に加えて斜線の模様で示します。色の違いがわかりにくくても、斜線があるかどうかで焼けていない場所がわかります。</p></div>
+                        <div><strong>判定ロジックを差し替えられる設計</strong><p>判定は <code>DonenessAnalyzing</code> プロトコルを通して行います。現在は色相をもとにした簡易的な判定（<code>HeuristicDonenessAnalyzer</code>）ですが、将来Create MLで学習したセグメンテーションモデルに差し替えられるようにしています。</p></div>
+                        <div><strong>iPhone上でリアルタイムに解析</strong><p>AVFoundationでカメラ映像を取り込み、フレームを間引いて粗いグリッドに縮小してから解析します。発熱やバッテリー消費を抑えながら、焼き加減をリアルタイムに表示します。</p></div>
                     </div>
-
-                    <div class="content-section">
-                        <h3>Features</h3>
-                        <div class="feature-grid">
-                            <div class="feature-item">
-                                <strong>色だけに頼らない斜線表示</strong>
-                                <p>生に見える部分を、薄いアンバー色に加えて斜線の模様で示します。色の違いがわかりにくくても、斜線があるかどうかで焼けていない場所がわかります。</p>
                             </div>
-                            <div class="feature-item">
-                                <strong>判定ロジックを差し替えられる設計</strong>
-                                <p>判定は <code>DonenessAnalyzing</code> プロトコルを通して行います。現在は色相をもとにした簡易的な判定（<code>HeuristicDonenessAnalyzer</code>）ですが、将来Create MLで学習したセグメンテーションモデルに差し替えられるようにしています。</p>
-                            </div>
-                            <div class="feature-item">
-                                <strong>iPhone上でリアルタイムに解析</strong>
-                                <p>AVFoundationでカメラ映像を取り込み、フレームを間引いて粗いグリッドに縮小してから解析します。発熱やバッテリー消費を抑えながら、焼き加減をリアルタイムに表示します。</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h3>Source files</h3>
-                        <div class="file-list">
-                            <ul>
+                            <section class="app-sec" id="included">
+                                <h2 class="app-label">Source files</h2>
+                                <div class="file-list"><ul>
                                 <li><code>MeatCamApp.swift</code> — アプリの起動処理</li>
                                 <li><code>ContentView.swift</code> — メイン画面（カメラ映像、斜線の重ね表示、凡例）</li>
                                 <li><code>CameraManager.swift</code> — カメラのキャプチャセッションの管理</li>
                                 <li><code>DonenessAnalyzer.swift</code> — 生に見えるかどうかの判定</li>
                                 <li><code>CameraPreviewView.swift</code> — カメラのプレビューをSwiftUIで表示</li>
                                 <li><code>RawRegionOverlayView.swift</code> — 斜線の描画</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="download-area">
-                        <div class="action-container">
-                            <a href="https://github.com/CAIN218/meat-cam" class="action-btn" target="_blank" rel="noopener noreferrer">GitHubで見る</a>
-                        </div>
-                        <p class="download-meta">動作環境: iOS 17以降、カメラ付きのiPhone（ビルドにはXcodeが必要）</p>
-                        <div class="warning-box">
-                            <h4>開発中のアプリです</h4>
-                            <p>MeatCamはまだApp Storeで配布していません。試すには、ソースコードをXcodeでビルドしてお使いのiPhoneにインストールしてください。判定はまだ調整前の簡易的なものなので、実際の焼き加減と一致しない場合があります。</p>
+                            </ul></div>
+                            </section>
+                            <section class="app-sec">
+                                <div class="app-warn"><strong>開発中のアプリです</strong><p>MeatCamはまだApp Storeで配布していません。試すには、ソースコードをXcodeでビルドしてお使いのiPhoneにインストールしてください。判定はまだ調整前の簡易的なものなので、実際の焼き加減と一致しない場合があります。</p></div>
+                            </section>
                         </div>
                     </div>
                 </div>

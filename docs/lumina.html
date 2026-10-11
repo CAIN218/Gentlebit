@@ -73,70 +73,45 @@
             </nav>
 
             <div id="main">
-                <div class="project-card">
+                <div class="app-page">
                     <a href="index.html#apps" class="card-back-btn">← Back</a>
-                    <header>
-                        <h1>Lumina</h1>
-                        <span class="subtitle">Brightness control for multi-monitor Windows setups, right from the taskbar</span>
-                    </header>
-
-                    <div class="main-image"><img src="images/lumina-icon.svg" alt="Lumina icon" /></div>
-
-                    <div class="content-section">
-                        <h3>Overview</h3>
-                        <p>Lumina lives in your taskbar and lets you change the brightness of any monitor that supports DDC/CI. Click the tray icon and a panel opens with one slider for each connected display. No more digging through Control Panel or pressing the buttons on each monitor.</p>
+                    <div class="app-grid">
+                        <aside class="app-side">
+                            <img class="app-icon" src="images/lumina-icon.svg" alt="Lumina icon" />
+                            <h1>Lumina</h1>
+                            <p class="app-sub">Brightness control for multi-monitor Windows setups, right from the taskbar</p>
+                            <a href="https://github.com/CAIN218/Lumina/releases/latest" class="action-btn app-dl" target="_blank" rel="noopener noreferrer">Download</a>
+                            <dl class="app-facts"><div><dt>Version</dt><dd>1.1.0</dd></div><div><dt>Requires</dt><dd>Windows 10 / 11 (64-bit) and a monitor that supports DDC/CI</dd></div><div><dt>GitHub</dt><dd><a href="https://github.com/CAIN218/Lumina" target="_blank" rel="noopener noreferrer">CAIN218/Lumina</a></dd></div></dl>
+                            <nav class="app-nav" aria-label="On this page"><a href="#overview">Overview</a><a href="#features">Features</a><a href="#included">What's included</a></nav>
+                        </aside>
+                        <div class="app-body">
+                            <p class="app-lead" id="overview">Lumina lives in your taskbar and lets you change the brightness of any monitor that supports DDC/CI. Click the tray icon and a panel opens with one slider for each connected display. No more digging through Control Panel or pressing the buttons on each monitor.</p>
+                            <div id="features">
+                    <div class="app-feat">
+                        <div class="app-feat-text"><strong>A clean slider panel in the tray</strong><p>Click the tray icon and the panel fades and slides into view, with a slider for each monitor. Rounded corners, a soft glow on the handle while you drag, and the same calm dark design as the other Yuga's lab apps make it feel more polished than the usual tray utility.</p></div>
+                        <img class="feature-media" src="images/lumina-panel.gif" alt="Adjusting each monitor from the tray panel" width="638" height="412" loading="lazy" />
                     </div>
-
-                    <div class="content-section">
-                        <h3>Features</h3>
-                        <div class="feature-grid">
-                            <div class="feature-item">
-                                <strong>A clean slider panel in the tray</strong>
-                                <p>Click the tray icon and the panel fades and slides into view, with a slider for each monitor. Rounded corners, a soft glow on the handle while you drag, and the same calm dark design as the other Yuga's lab apps make it feel more polished than the usual tray utility.</p>
-                                <img class="feature-media" src="images/lumina-panel.gif" alt="Adjusting each monitor from the tray panel" width="638" height="412" loading="lazy" />
-                            </div>
-                            <div class="feature-item">
-                                <strong>Adjust monitors one by one or all at once</strong>
-                                <p>Each slider always controls its own monitor. Turn on “Link sliders together” from the right-click menu to add a master slider that moves every monitor at once.</p>
-                            </div>
-                            <div class="feature-item">
-                                <strong>Smooth dragging, even on slow monitors</strong>
-                                <p>A DDC/CI command can take up to about 100 ms. Lumina keeps only the latest target value for each monitor and sends it from a background thread, so the slider never lags behind your mouse.</p>
-                            </div>
-                            <div class="feature-item">
-                                <strong>A tray icon you can always see</strong>
-                                <p>The icon switches between a light and a dark version to match your taskbar, so it never disappears on a light taskbar. Change Windows' color mode and the icon follows right away.</p>
-                            </div>
-                            <div class="feature-item">
-                                <strong>Updates itself</strong>
-                                <p>Lumina checks GitHub for new versions and lets you know when one is out. Update in one click, or turn on Auto-update from the right-click menu. You can also see what changed with “What's New”, and the menu shows the version you're running.</p>
-                                <img class="feature-media" src="images/lumina-menu.gif" alt="The right-click menu and the What's New window" width="648" height="512" loading="lazy" />
-                            </div>
-                            <div class="feature-item">
-                                <strong>English or Japanese</strong>
-                                <p>Choose the display language from Language in the right-click menu. English is the default.</p>
-                            </div>
-                        </div>
+                    <div class="app-feat flip">
+                        <div class="app-feat-text"><strong>Updates itself</strong><p>Lumina checks GitHub for new versions and lets you know when one is out. Update in one click, or turn on Auto-update from the right-click menu. You can also see what changed with “What's New”, and the menu shows the version you're running.</p></div>
+                        <img class="feature-media" src="images/lumina-menu.gif" alt="The right-click menu and the What's New window" width="648" height="512" loading="lazy" />
                     </div>
-
-                    <div class="content-section">
-                        <h3>What's included</h3>
-                        <div class="file-list">
-                            <ul>
+                    <div class="app-more">
+                        <div><strong>Adjust monitors one by one or all at once</strong><p>Each slider always controls its own monitor. Turn on “Link sliders together” from the right-click menu to add a master slider that moves every monitor at once.</p></div>
+                        <div><strong>Smooth dragging, even on slow monitors</strong><p>A DDC/CI command can take up to about 100 ms. Lumina keeps only the latest target value for each monitor and sends it from a background thread, so the slider never lags behind your mouse.</p></div>
+                        <div><strong>A tray icon you can always see</strong><p>The icon switches between a light and a dark version to match your taskbar, so it never disappears on a light taskbar. Change Windows' color mode and the icon follows right away.</p></div>
+                        <div><strong>English or Japanese</strong><p>Choose the display language from Language in the right-click menu. English is the default.</p></div>
+                    </div>
+                            </div>
+                            <section class="app-sec" id="included">
+                                <h2 class="app-label">What's included</h2>
+                                <div class="file-list"><ul>
                                 <li><code>Lumina.exe</code> — The entire app. It runs from the taskbar and needs nothing else installed.</li>
                                 <li><code>README.md</code> — How to use it, with a description of every menu option.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="download-area">
-                        <div class="action-container">
-                            <a href="https://github.com/CAIN218/Lumina/releases/latest" class="action-btn" target="_blank" rel="noopener noreferrer">Download</a>
-                        </div>
-                        <p class="download-meta">Version 1.1.0 · Requires: Windows 10 / 11 (64-bit) and a monitor that supports DDC/CI</p>
-                        <div class="warning-box">
-                            <h4>About the Windows SmartScreen warning</h4>
-                            <p>Lumina isn't code-signed, so Windows may show a SmartScreen warning the first time you run it. Download and run it at your own risk. The full source code is on GitHub if you'd like to check it first.</p>
+                            </ul></div>
+                            </section>
+                            <section class="app-sec">
+                                <div class="app-warn"><strong>About the Windows SmartScreen warning</strong><p>Lumina isn't code-signed, so Windows may show a SmartScreen warning the first time you run it. Download and run it at your own risk. The full source code is on GitHub if you'd like to check it first.</p></div>
+                            </section>
                         </div>
                     </div>
                 </div>

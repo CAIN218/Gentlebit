@@ -73,60 +73,40 @@
             </nav>
 
             <div id="main">
-                <div class="project-card">
+                <div class="app-page">
                     <a href="index.html#apps" class="card-back-btn">← Back</a>
-                    <header>
-                        <h1>MeatCam</h1>
-                        <span class="subtitle">See which parts of your meat are still raw, without relying on color</span>
-                    </header>
-
-                    <div class="main-image"><img src="images/meatcam-icon.svg" alt="MeatCam icon" /></div>
-
-                    <div class="content-section">
-                        <h3>Overview</h3>
-                        <p>MeatCam is an iOS app that helps colorblind people tell whether meat is cooked. Point your camera at the meat and any part that still looks raw is covered with diagonal stripes. Because the main signal is a pattern rather than a color, it works well for people with red–green color blindness.</p>
+                    <div class="app-grid">
+                        <aside class="app-side">
+                            <img class="app-icon" src="images/meatcam-icon.svg" alt="MeatCam icon" />
+                            <h1>MeatCam</h1>
+                            <p class="app-sub">See which parts of your meat are still raw, without relying on color</p>
+                            <a href="https://github.com/CAIN218/meat-cam" class="action-btn app-dl" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                            <dl class="app-facts"><div><dt>Requires</dt><dd>iOS 17 or later on an iPhone with a camera (built with Xcode)</dd></div></dl>
+                            <nav class="app-nav" aria-label="On this page"><a href="#overview">Overview</a><a href="#features">Features</a><a href="#included">Source files</a></nav>
+                        </aside>
+                        <div class="app-body">
+                            <p class="app-lead" id="overview">MeatCam is an iOS app that helps colorblind people tell whether meat is cooked. Point your camera at the meat and any part that still looks raw is covered with diagonal stripes. Because the main signal is a pattern rather than a color, it works well for people with red–green color blindness.</p>
+                            <div id="features">
+                    <div class="app-more">
+                        <div><strong>Stripes instead of color alone</strong><p>Raw-looking areas get a light amber tint plus a diagonal stripe pattern. Even if the tint is hard to see, the stripes show you exactly where the meat is undercooked.</p></div>
+                        <div><strong>A detector you can swap out</strong><p>Detection goes through the <code>DonenessAnalyzing</code> protocol. For now it uses a simple hue-based heuristic (<code>HeuristicDonenessAnalyzer</code>), and it's designed so a segmentation model trained with Create ML can replace it later.</p></div>
+                        <div><strong>Real-time analysis on your iPhone</strong><p>The camera feed comes in through AVFoundation. MeatCam skips frames and shrinks each one to a coarse grid before analyzing it, so it shows results in real time without draining the battery or overheating the phone.</p></div>
                     </div>
-
-                    <div class="content-section">
-                        <h3>Features</h3>
-                        <div class="feature-grid">
-                            <div class="feature-item">
-                                <strong>Stripes instead of color alone</strong>
-                                <p>Raw-looking areas get a light amber tint plus a diagonal stripe pattern. Even if the tint is hard to see, the stripes show you exactly where the meat is undercooked.</p>
                             </div>
-                            <div class="feature-item">
-                                <strong>A detector you can swap out</strong>
-                                <p>Detection goes through the <code>DonenessAnalyzing</code> protocol. For now it uses a simple hue-based heuristic (<code>HeuristicDonenessAnalyzer</code>), and it's designed so a segmentation model trained with Create ML can replace it later.</p>
-                            </div>
-                            <div class="feature-item">
-                                <strong>Real-time analysis on your iPhone</strong>
-                                <p>The camera feed comes in through AVFoundation. MeatCam skips frames and shrinks each one to a coarse grid before analyzing it, so it shows results in real time without draining the battery or overheating the phone.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h3>Source files</h3>
-                        <div class="file-list">
-                            <ul>
+                            <section class="app-sec" id="included">
+                                <h2 class="app-label">Source files</h2>
+                                <div class="file-list"><ul>
                                 <li><code>MeatCamApp.swift</code> — App entry point</li>
                                 <li><code>ContentView.swift</code> — Main screen (camera feed, stripe overlay and legend)</li>
                                 <li><code>CameraManager.swift</code> — Manages the camera capture session</li>
                                 <li><code>DonenessAnalyzer.swift</code> — Decides which areas look raw</li>
                                 <li><code>CameraPreviewView.swift</code> — Shows the camera preview in SwiftUI</li>
                                 <li><code>RawRegionOverlayView.swift</code> — Draws the diagonal stripes</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="download-area">
-                        <div class="action-container">
-                            <a href="https://github.com/CAIN218/meat-cam" class="action-btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                        </div>
-                        <p class="download-meta">Requires: iOS 17 or later on an iPhone with a camera (built with Xcode)</p>
-                        <div class="warning-box">
-                            <h4>Still in development</h4>
-                            <p>MeatCam isn't on the App Store yet. To try it, build the source in Xcode and install it on your own iPhone. Detection is a simple heuristic that hasn't been tuned yet, so it won't always match how cooked the meat really is.</p>
+                            </ul></div>
+                            </section>
+                            <section class="app-sec">
+                                <div class="app-warn"><strong>Still in development</strong><p>MeatCam isn't on the App Store yet. To try it, build the source in Xcode and install it on your own iPhone. Detection is a simple heuristic that hasn't been tuned yet, so it won't always match how cooked the meat really is.</p></div>
+                            </section>
                         </div>
                     </div>
                 </div>
