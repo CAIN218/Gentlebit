@@ -349,6 +349,14 @@ textarea.form-control { min-height: 160px; resize: vertical; }
 .footer-privacy-link { font-size: 12px; color: var(--text-mute); text-decoration: underline; text-underline-offset: 3px; }
 .footer-privacy-link:hover { color: #fff; }
 
+/* ---------- Reduced motion: skip the signature animation and show everything at once ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .brand-logo-svg text { animation: none; stroke-dashoffset: 0; fill: #fff; }
+    .intro-polygon-node, .intro-path-node { animation: none; opacity: 1; stroke-dashoffset: 0; }
+    #intro p, .intro-cta { animation: none; opacity: 1; }
+    .page-home #main, .page-home #custom-footer { opacity: 1; transition: none; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
     .posts { grid-template-columns: repeat(2, 1fr); }
