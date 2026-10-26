@@ -105,43 +105,10 @@
 
                 <section class="home-section" id="apps">
                     <h2 class="section-title">Apps</h2>
-                    <div class="posts">
-    
-                        <article>
-                            <a href="lumina.html" class="card-link">
-                                <div class="card-image"><img src="images/lumina-icon.svg" alt="Lumina icon" /></div>
-                                <div class="card-body">
-                                    <span class="date">2026.07.19 · Windows</span>
-                                    <h2>Lumina</h2>
-                                    <p>Control the brightness of every monitor from one slider panel in your taskbar.</p>
-                                    <span class="more">Learn more</span>
-                                </div>
-                            </a>
-                        </article>
-    
-                        <article>
-                            <a href="meatcam.html" class="card-link">
-                                <div class="card-image"><img src="images/meatcam-icon.svg" alt="MeatCam icon" /></div>
-                                <div class="card-body">
-                                    <span class="date">2026.07.18 · iOS</span>
-                                    <h2>MeatCam</h2>
-                                    <p>Point your camera at meat and see which parts still look raw, marked with stripes instead of color.</p>
-                                    <span class="more">Learn more</span>
-                                </div>
-                            </a>
-                        </article>
-    
-                        <article>
-                            <a href="audioswitcher.html" class="card-link">
-                                <div class="card-image"><img src="images/audioswitcher-icon.svg" alt="AudioSwitcher icon" /></div>
-                                <div class="card-body">
-                                    <span class="date">2026.07.18 · Windows</span>
-                                    <h2>AudioSwitcher</h2>
-                                    <p>Switch between speakers, headsets and other audio outputs with a single hotkey.</p>
-                                    <span class="more">Learn more</span>
-                                </div>
-                            </a>
-                        </article>
+                    <div class="home-apps" id="home-apps" data-lang="en" data-base="">
+                        <div class="app-tabs" role="tablist"></div>
+                        <div class="app-pane" role="tabpanel"></div>
+                        <noscript><ul class="app-noscript"><li><a href="lumina.html">Lumina</a></li><li><a href="audioswitcher.html">AudioSwitcher</a></li><li><a href="meatcam.html">MeatCam</a></li></ul></noscript>
                     </div>
                 </section>
 
@@ -199,6 +166,8 @@
             })();
         </script>
         <script src="assets/js/news.js"></script>
+        <script src="assets/js/apps.js"></script>
+        <script src="assets/js/home-apps.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 var sideNav = document.getElementById('side-nav');
