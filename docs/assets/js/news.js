@@ -9,6 +9,13 @@
 window.YUGALAB_NEWS = [
     {
         date: "2026-10-26",
+        tag: "AudioSwitcher",
+        en: "Released AudioSwitcher 1.8.0 with a redesigned Settings screen (left menu, light/dark/follow-device theme, auto-save), animated how-to help, a new blue icon, a build less likely to trigger antivirus false alarms, and SHA256 checks for automatic updates.",
+        ja: "AudioSwitcher 1.8.0 を公開しました。設定画面の作り直し（左メニュー、ライト/ダーク/デバイスに合わせる、自動保存）、使い方のアニメーション、新しい青いアイコン、ウイルス対策ソフトに誤検知されにくいビルド、自動更新時のSHA256検証に対応しています。",
+        link: "audioswitcher.html"
+    },
+    {
+        date: "2026-10-26",
         tag: "Site",
         en: "Updated the site icon and the page title so the site is easier to recognize in search results.",
         ja: "検索結果で見つけやすいよう、サイトのアイコンとページタイトルを更新しました。",
