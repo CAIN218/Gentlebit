@@ -25,202 +25,74 @@
         <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Pinyon+Script&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Kurenaido&display=swap" />
         <link rel="stylesheet" href="../assets/css/site.css" />
-        <noscript><style>.global-header, .posts article, .project-card, .page-home #main, .page-home #custom-footer { opacity: 1 !important; transform: none !important; pointer-events: auto !important; }</style></noscript>
             <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Gentlebit","url":"https://cain218.github.io/Gentlebit/ja/","inLanguage":"ja"}</script>
     </head>
     <body class="page-home">
-        <div id="custom-parallax-bg"></div>
-
-        <div id="wrapper">
-            <header class="global-header" id="global-header">
-                <a href="index.html" class="header-logo-svg-wrapper">
-                    <svg class="header-signature-svg" viewBox="0 0 160 45" xmlns="http://www.w3.org/2000/svg">
-                        <polygon points="5,12 12,6 19,12 12,18" fill="none" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round" />
-                        <path d="M 5,12 C -2,26 28,38 70,38 L 155,38" fill="none" stroke="url(#line-fade)" stroke-width="1" stroke-linecap="round" />
-                        <defs>
-                            <linearGradient id="line-fade" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="rgba(255,255,255,0.6)" />
-                                <stop offset="70%" stop-color="rgba(255,255,255,0.25)" />
-                                <stop offset="100%" stop-color="rgba(255,255,255,0)" />
-                            </linearGradient>
-                        </defs>
-                        <text x="23" y="32" class="signature-text-node">Gentlebit.</text>
-                    </svg>
-                </a>
-                <div class="header-right">
-                    <nav class="header-links">
-                        <a href="index.html#news">News</a>
-                        <a href="index.html#apps">Apps</a>
-                        <a href="index.html#about">About</a>
-                        <a href="contact.html">Contact</a>
-                    </nav>
-                    <a href="../index.html" class="lang-link" hreflang="en">English</a>
-                    <button class="menu-trigger-btn" id="menu-open" aria-label="Open menu"><span></span><span></span></button>
-                </div>
-            </header>
-
-            <nav class="side-nav" id="side-nav">
-                <button class="side-nav-close" id="menu-close" aria-label="メニューを閉じる">✕</button>
-                <div class="side-menu-list">
-                    <div class="side-menu-section">
-                        <span class="side-menu-category">Menu</span>
-                        <div class="side-menu-item"><a href="index.html" class="side-menu-link">Home</a></div>
-                        <div class="side-menu-item"><a href="index.html#news" class="side-menu-link">News</a></div>
-                        <div class="side-menu-item"><a href="index.html#about" class="side-menu-link">About</a></div>
-                        <div class="side-menu-item"><a href="contact.html" class="side-menu-link">Contact</a></div>
-                    </div>
-                    <div class="side-menu-section">
-                        <span class="side-menu-category">Apps</span>
-                        <div class="side-menu-item"><a href="lumina.html" class="side-menu-link">Lumina</a></div>
-                        <div class="side-menu-item"><a href="audioswitcher.html" class="side-menu-link">AudioSwitcher</a></div>
-                        <div class="side-menu-item"><a href="meatcam.html" class="side-menu-link">MeatCam <span class="nav-badge active">開発中</span></a></div>
-                    </div>
-                </div>
+        <div class="bg" aria-hidden="true"></div>
+        <header class="top" id="top">
+            <a class="brand" href="index.html">Gentlebit</a>
+            <nav aria-label="Main">
+                <a href="#news">News</a>
+                <a href="#apps">Apps</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <span class="lg2" role="group" aria-label="Language"><a href="../index.html" hreflang="en" lang="en">EN</a><a href="index.html" hreflang="ja" lang="ja" aria-current="true">JP</a></span>
             </nav>
-
-            <div id="intro">
-                <svg class="brand-logo-svg" viewBox="-157 0 600 160">
-                    <polygon points="-70,52 -50,32 -30,52 -50,72" class="intro-polygon-node" />
-                    <path d="M -70,52 C -96,128 -22,135 102,135 L 400,135" class="intro-path-node" />
-                    <defs>
-                        <linearGradient id="intro-line-fade" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="rgba(255,255,255,1)" />
-                            <stop offset="45%" stop-color="rgba(255,255,255,0.45)" />
-                            <stop offset="85%" stop-color="rgba(255,255,255,0)" />
-                        </linearGradient>
-                    </defs>
-                    <text x="150" y="112">Gentlebit</text>
-                </svg>
-                <p class="intro-tagline">日常の「ちょっと不便」を解消する、小さなWindows・iOSアプリ。</p>
-                <div class="intro-cta"><a href="#apps" class="action-btn">アプリを見る</a><a href="#news" class="ghost-btn">最新情報</a></div>
-            </div>
-
-            <div id="main">
-                <section class="home-section" id="news">
-                    <h2 class="section-title">News</h2>
+        </header>
+        <main>
+            <section class="hero" aria-label="Gentlebit">
+                <div class="hero-text">
+                    <h1><span class="ln">身近な「ちょっと不便」を、</span><span class="ln">小さなアプリで解消する。</span></h1>
+                    <p>モニターの明るさと、音の出力先。毎日使うものを、タスクバーから静かに操作できます。</p>
+                </div>
+                <div class="lumo" id="lumo" aria-hidden="true">Lumina 6%</div>
+            </section>
+            <div class="wrap">
+                <section class="sec" id="news">
+                    <h2>News</h2>
                     <ul class="news-list" id="news-list" data-lang="ja"></ul>
                 </section>
-
-                <section class="home-section" id="apps">
-                    <h2 class="section-title">Apps</h2>
-                    <div class="home-apps" id="home-apps" data-lang="ja" data-base="../">
-                        <div class="app-tabs" role="tablist"></div>
-                        <div class="app-pane" role="tabpanel"></div>
-                        <noscript><ul class="app-noscript"><li><a href="lumina.html">Lumina</a></li><li><a href="audioswitcher.html">AudioSwitcher</a></li><li><a href="meatcam.html">MeatCam</a></li></ul></noscript>
+                <section class="sec" id="apps">
+                    <h2>Apps</h2>
+                    <div class="apps" id="home-apps" data-lang="ja" data-base="../">
+                        <noscript><ul><li><a href="lumina.html">Lumina</a></li><li><a href="audioswitcher.html">AudioSwitcher</a></li><li><a href="meatcam.html">MeatCam</a></li></ul></noscript>
                     </div>
                 </section>
-
-                <section class="home-section" id="about">
-                    <h2 class="section-title">About</h2>
-                    <div class="about-panel">
-                        <p class="about-lead">身近な「ちょっと不便」を、小さなアプリで解消する。</p>
-                        <div class="about-body">
-                            <p>Gentlebitは、身近にある「ちょっと不便」を解消するために、個人でアプリを開発しているサイトです。</p>
-                            <p>音声の出力先の切り替えやモニターの明るさ調整など、自分が日々困っていたことをきっかけに作っています。ソースコードはすべてGitHubで公開しています。</p>
-                            <a href="https://github.com/CAIN218?tab=repositories" class="about-link" target="_blank" rel="noopener noreferrer">GitHubでコードを見る</a>
-                        </div>
+                <section class="sec about" id="about">
+                    <h2>About</h2>
+                    <div>
+                        <p class="lead">身近な「ちょっと不便」を、小さなアプリで解消する。</p>
+                        <p>Gentlebitは、身近にある「ちょっと不便」を解消するために、個人でアプリを開発しているサイトです。</p>
+                        <p>音声の出力先の切り替えやモニターの明るさ調整など、自分が日々困っていたことをきっかけに作っています。ソースコードはすべてGitHubで公開しています。</p>
+                        <p><a class="gh" href="https://github.com/CAIN218?tab=repositories" target="_blank" rel="noopener noreferrer">GitHubでコードを見る</a></p>
+                        <dl><dt>作っている人</dt><dd>Yuga Tanaka（個人）</dd><dt>通信について</dt><dd>AudioSwitcher と Lumina は、新しい版の確認とダウンロードのためにGitHubへ接続します。設定はお使いのパソコンの中にだけ保存されます。MeatCam は通信しません。</dd><dt>署名について</dt><dd>アプリにはコード署名がないため、初回起動時にWindowsの警告（SmartScreen）が出ることがあります。気になる場合は、GitHubのソースコードを先に確認できます。</dd></dl>
                     </div>
                 </section>
-
-                <section class="home-section" id="contact">
-                    <h2 class="section-title">Contact</h2>
-                    <div class="contact-panel">
-                        <p>ご質問や不具合の報告、「こんなアプリがほしい」といったご要望など、お気軽にお送りください。</p>
-                        <a href="contact.html" class="action-btn">お問い合わせフォームへ</a>
+                <section class="sec" id="contact">
+                    <h2>Contact</h2>
+                    <div>
+                        <p style="max-width:34em;margin:0 0 22px">ご質問や不具合の報告、「こんなアプリがほしい」といったご要望など、お気軽にお送りください。</p>
+                        <form class="form" action="https://formspree.io/f/xkoldvjp" method="POST">
+                            <div class="form-group"><label for="c-name">お名前</label><input type="text" id="c-name" name="name" class="form-control" required autocomplete="name"></div>
+                            <div class="form-group"><label for="c-email">メールアドレス</label><input type="email" id="c-email" name="_replyto" class="form-control" required autocomplete="email" placeholder="you@example.com"></div>
+                            <div class="form-group"><label for="c-message">メッセージ</label><textarea id="c-message" name="message" class="form-control" required></textarea></div>
+                            <button type="submit" class="submit-btn">送信する</button>
+                            <p class="form-note">送信すると、<a href="privacy.html">プライバシーポリシー</a>に書かれた扱いに同意したものとします。</p>
+                        </form>
                     </div>
                 </section>
             </div>
-
-            <footer id="custom-footer">
-                <a href="https://github.com/CAIN218?tab=repositories" class="footer-github-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
-                <div class="disclaimer-box">
-                    <p>本サイトのツールは個人が開発したもので、無保証で提供しています。使用によって生じたデータの損失やシステムの不具合などについて、開発者は一切の責任を負いません。ご利用は自己責任でお願いします。</p>
-                </div>
-                <a href="privacy.html" class="footer-privacy-link">プライバシーポリシー</a>
-                <div class="footer-copyright">&copy; Gentlebit. All Rights Reserved.</div>
-            </footer>
-        </div>
-
-        <script>
-            // Return to the same scroll position when coming back from another page.
-            (function () {
-                var KEY = "yugalab-scroll:" + location.pathname;
-                window.addEventListener("pagehide", function () {
-                    try { sessionStorage.setItem(KEY, String(window.scrollY)); } catch (e) {}
-                });
-                var nav = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
-                if (nav && nav.type === "back_forward") {
-                    var y = null;
-                    try { y = sessionStorage.getItem(KEY); } catch (e) {}
-                    if (y !== null) {
-                        if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-                        window.addEventListener("load", function () {
-                            document.documentElement.style.scrollBehavior = "auto";
-                            window.scrollTo(0, parseInt(y, 10));
-                            document.documentElement.style.scrollBehavior = "";
-                        });
-                    }
-                }
-            })();
-        </script>
+        </main>
+        <footer class="site-footer"><div class="wrap">
+            <p>本サイトのツールは個人が開発したもので、無保証で提供しています。使用によって生じたデータの損失やシステムの不具合などについて、開発者は一切の責任を負いません。ご利用は自己責任でお願いします。</p>
+            <div class="row"><a href="privacy.html">プライバシーポリシー</a><a href="https://github.com/CAIN218?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a><span>&copy; Gentlebit. All Rights Reserved.</span></div>
+        </div></footer>
+        <script src="../assets/js/site.js"></script>
+        <script src="../assets/js/home.js"></script>
         <script src="../assets/js/news.js"></script>
         <script src="../assets/js/apps.js"></script>
         <script src="../assets/js/home-apps.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                var sideNav = document.getElementById('side-nav');
-                var header = document.getElementById('global-header');
-                var headerTriggered = false;
-
-                document.getElementById('menu-open').addEventListener('click', function() { sideNav.classList.add('open'); });
-                document.getElementById('menu-close').addEventListener('click', function() { sideNav.classList.remove('open'); });
-                document.addEventListener('click', function(e) { if (!sideNav.contains(e.target) && !document.getElementById('menu-open').contains(e.target)) sideNav.classList.remove('open'); });
-
-                var langDropdown = document.getElementById('lang-dropdown');
-                var langDropdownTrigger = document.getElementById('lang-dropdown-trigger');
-                if (langDropdown && langDropdownTrigger) {
-                    langDropdownTrigger.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                        langDropdown.classList.toggle('open');
-                    });
-                    document.addEventListener('click', function(e) {
-                        if (!langDropdown.contains(e.target)) langDropdown.classList.remove('open');
-                    });
-                }
-
-                function triggerHeader() {
-                    if (!headerTriggered && header) {
-                        headerTriggered = true;
-                        header.classList.add('show-header');
-                        document.body.classList.add('intro-done');
-                    }
-                }
-
-                var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-                if (reduceMotion) { triggerHeader(); } else { setTimeout(triggerHeader, 3900); }
-
-                var parallaxBg = document.getElementById('custom-parallax-bg');
-                if (parallaxBg) {
-                    var updateBg = function() {
-                        var sTop = window.scrollY, dHeight = document.documentElement.scrollHeight - window.innerHeight;
-                        var ratio = dHeight > 0 ? sTop / dHeight : 0;
-                        parallaxBg.style.setProperty('background-position', 'center ' + (40 + (ratio * 20)) + '%', 'important');
-
-                        if (sTop > 0) {
-                            triggerHeader();
-                        }
-                    };
-                    updateBg();
-                    window.addEventListener('scroll', updateBg);
-                }
-
-                var cards = document.querySelectorAll('.posts article'), obs = new IntersectionObserver(function(ens) {
-                    ens.forEach(function(en) { if (en.isIntersecting) en.target.classList.add('show-card'); });
-                }, { rootMargin: '0px 0px -10% 0px' });
-                cards.forEach(function(ca) { obs.observe(ca); });
-            });
-        </script>
     </body>
 </html>
