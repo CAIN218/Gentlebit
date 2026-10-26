@@ -10,6 +10,13 @@ window.YUGALAB_NEWS = [
     {
         date: "2026-10-26",
         tag: "Site",
+        en: "Updated the site icon and the page title so the site is easier to recognize in search results.",
+        ja: "検索結果で見つけやすいよう、サイトのアイコンとページタイトルを更新しました。",
+        link: null
+    },
+    {
+        date: "2026-10-26",
+        tag: "Site",
         en: "Changed the description on the top page.",
         ja: "トップページの説明文を変更しました。",
         link: null
