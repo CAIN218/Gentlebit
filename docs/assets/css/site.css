@@ -208,10 +208,11 @@ textarea.form-control { min-height: 130px; resize: vertical; }
 html[lang="ja"] .app-feat strong, html[lang="ja"] .app-more strong { font-family: var(--mincho); }
 .app-feat p, .app-more p { margin: 0; max-width: 31em; }
 .feature-media {
+    --rot: -.7deg;
     display: block; box-sizing: border-box; width: 100%; height: auto; background: #222;
-    border: 9px solid var(--paper); box-shadow: 0 12px 34px rgba(0, 0, 0, .55); transform: rotate(-.7deg);
+    border: 9px solid var(--paper); box-shadow: 0 12px 34px rgba(0, 0, 0, .55); transform: rotate(var(--rot, -.7deg));
 }
-.app-feat.flip .feature-media { transform: rotate(.6deg); }
+.app-feat.flip .feature-media { --rot: .6deg; }
 .app-more { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(36px, 6vw, 80px); margin-block: 40px; }
 .app-more > div { padding: 18px 0; border-top: 1px solid var(--line); }
 .app-sec { margin-top: clamp(36px, 5vw, 56px); }
@@ -252,4 +253,18 @@ html[lang="ja"] .app-feat strong, html[lang="ja"] .app-more strong { font-family
     .lg2 { gap: 9px; margin-left: 0; font-size: 13px; }
     html[lang="en"] .hero h1 { font-size: clamp(30px, 9vw, 38px); }
     html[lang="ja"] .hero h1 { font-size: clamp(22px, 6.3vw, 30px); }
+}
+
+/* ---------- Scroll reveal (added by reveal.js) ---------- */
+.rv { opacity: 0; transform: translateY(14px); transition: opacity .8s ease, transform .8s ease; transition-delay: var(--d, 0ms); }
+.rv.in { opacity: 1; transform: none; }
+.shot.rv, .feature-media.rv { opacity: 0; transform: translateY(-34px) rotate(calc(var(--rot, 0deg) + 5deg)) scale(1.05); transition: opacity .35s ease, transform .7s cubic-bezier(.2, 1.5, .4, 1); transition-delay: var(--d, 0ms); }
+.shot.rv.in, .feature-media.rv.in { opacity: 1; transform: rotate(var(--rot, 0deg)); }
+.note.rv, .note.rv.in { transform: rotate(-1.5deg); }
+.note.rv { opacity: 0; transition: opacity 1s ease .5s; }
+.note.rv.in { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+    .rv, .shot.rv, .feature-media.rv, .note.rv { opacity: 1; transition: none; }
+    .rv { transform: none; }
+    .shot.rv, .feature-media.rv { transform: rotate(var(--rot, 0deg)); }
 }
