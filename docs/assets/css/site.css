@@ -143,7 +143,7 @@ body:not(.page-home) #custom-parallax-bg::after {
     font-family: "Pinyon Script", cursive; font-size: 105px; text-anchor: middle;
     fill: rgba(255, 255, 255, 0); stroke: #fff; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
     stroke-dasharray: 1000; stroke-dashoffset: 1000;
-    animation: writeSign 3.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: writeSign 2.6s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;
 }
 @keyframes writeSign {
     0% { stroke-dashoffset: 1000; fill: rgba(255, 255, 255, 0); }
@@ -153,12 +153,15 @@ body:not(.page-home) #custom-parallax-bg::after {
 .intro-polygon-node {
     fill: none; stroke: #fff; stroke-width: 2px; stroke-linejoin: round;
     stroke-dasharray: 100; stroke-dashoffset: 100; opacity: 0;
-    animation: drawStroke 0.5s ease 3.3s forwards;
+    animation: drawStroke 0.45s ease 0.05s forwards, lightMark 1.6s ease 3.2s 1;
+}
+@keyframes lightMark {
+    40% { stroke: #e6a05f; filter: drop-shadow(0 0 8px rgba(230, 160, 95, 0.9)); }
 }
 .intro-path-node {
     fill: none; stroke: url(#intro-line-fade); stroke-width: 1.8px; stroke-linecap: round;
     stroke-dasharray: 600; stroke-dashoffset: 600; opacity: 0;
-    animation: drawStroke 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 3.8s forwards;
+    animation: drawStroke 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards;
 }
 @keyframes drawStroke {
     0% { opacity: 1; }
@@ -167,7 +170,6 @@ body:not(.page-home) #custom-parallax-bg::after {
 #intro p {
     margin-top: 18px; font-size: 18px; color: rgba(255, 255, 255, 0.88);
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
-    opacity: 0; animation: fadeUp 1s ease 4.6s forwards;
 }
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(8px); }
@@ -330,7 +332,7 @@ textarea.form-control { min-height: 160px; resize: vertical; }
 
 /* ---------- Home: tagline + call to action ---------- */
 #intro p.intro-tagline { max-width: 560px; line-height: 1.6; }
-.intro-cta { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; opacity: 0; animation: fadeUp 1s ease 5s forwards; }
+.intro-cta { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 .ghost-btn {
     display: inline-flex; align-items: center; justify-content: center; padding: 0.85rem 1.8rem; border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.35); color: #fff; font-weight: 600; font-size: 0.95rem; text-decoration: none;
