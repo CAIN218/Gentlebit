@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cain218.github.io/Yuga-lab/sitemap.xml
+Sitemap: https://cain218.github.io/Gentlebit/sitemap.xml
