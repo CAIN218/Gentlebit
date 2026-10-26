@@ -25,8 +25,8 @@
         <link rel="icon" href="../images/favicon-48.png" sizes="48x48" type="image/png" />
         <link rel="icon" href="../images/favicon-192.png" sizes="192x192" type="image/png" />
         <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
-        <link rel="stylesheet" href="../assets/css/fonts.css?v=8" />
-        <link rel="stylesheet" href="../assets/css/site.css?v=8" />
+        <link rel="stylesheet" href="../assets/css/fonts.css?v=9" />
+        <link rel="stylesheet" href="../assets/css/site.css?v=9" />
             <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AudioSwitcher","description":"AudioSwitcher — ショートカットキーひとつでWindowsの音声出力を切り替える常駐アプリ。","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 10, Windows 11","inLanguage":"ja","url":"https://cain218.github.io/Gentlebit/ja/audioswitcher.html","author":{"@type":"Person","name":"Yuga Tanaka"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
     </head>
     <body class="page-app page-sub">
@@ -57,18 +57,26 @@
                             <p class="app-lead" id="overview">AudioSwitcherは、スピーカー、ヘッドセット、外付けDACなどの音声出力先を、ショートカットキーひとつで切り替えられるWindows常駐アプリです。ゲームや通話の途中にサウンド設定を開く必要はもうありません。</p>
                             <div id="features">
                     <div class="app-feat">
-                        <div class="app-feat-text"><strong>シンプルな3つのタブ</strong><p>画面は3つのタブに分かれています。A/B Switch では2台の出力先の切り替え、Multi-Device では出力先の一覧から選んでの切り替え（一覧に出すデバイスも1台ずつ選べます）、Settings ではスタートアップ登録やアップデートの設定ができます。</p></div>
-                        <img class="feature-media" src="../images/audioswitcher-hotkey.gif" alt="ショートカットキーで出力先を切り替える様子" width="640" height="611" loading="lazy" />
+                        <div class="app-feat-text"><strong>左メニューの3つのページ</strong><p>画面の左にメニューがあり、「切り替え」「デバイス一覧」「全般」の3ページに分かれています。「切り替え」ではAとBの2台とホットキーを決めると、ワンキーで交互に切り替わります。変更は自動で保存されます。</p></div>
+                        <img class="feature-media" src="../images/audioswitcher-switch.png" alt="「切り替え」ページ：デバイスA・デバイスB・ホットキーを選ぶ" width="700" height="560" loading="lazy" />
+                    </div>
+                    <div class="app-feat flip">
+                        <div class="app-feat-text"><strong>出力先を一覧から選ぶ</strong><p>「デバイス一覧」のホットキーを押すと、つながっている出力先が画面の中央に一覧で出ます。選ぶとその出力先に切り替わります。一覧に出すデバイスは自分で選べます。</p></div>
+                        <img class="feature-media" src="../images/audioswitcher-devices.png" alt="「デバイス一覧」ページ：一覧に出すデバイスを選ぶ" width="700" height="560" loading="lazy" />
+                    </div>
+                    <div class="app-feat">
+                        <div class="app-feat-text"><strong>ライト・ダーク、そして言語</strong><p>「全般」では、ライト・ダーク・デバイスに合わせる、から表示テーマを選び、English／日本語の切り替えやWindows起動時の常駐をオンにできます。バージョンの表示と、アップデートの確認もここです。</p></div>
+                        <img class="feature-media" src="../images/audioswitcher-general.png" alt="「全般」ページ：テーマ・言語・常駐・アップデート" width="700" height="560" loading="lazy" />
                     </div>
                     <div class="app-feat flip">
                         <div class="app-feat-text"><strong>ひと目でわかる切り替え通知</strong><p>切り替えると、画面右下に小さなカードが表示され、ヘッドホンやスピーカーのアイコンと新しい出力先の名前を知らせてから消えます。作業の邪魔をせずにどのデバイスになったかがわかり、アップデートがあるときもここでお知らせします。</p></div>
-                        <img class="feature-media" src="../images/audioswitcher-multidevice.gif" alt="一覧から出力先を選んで切り替える様子" width="640" height="360" loading="lazy" />
+                        <img class="feature-media" src="../images/audioswitcher-toast.png" alt="Headphonesに切り替えたあとに表示される通知カード" width="700" height="560" loading="lazy" />
                     </div>
                     <div class="app-more">
-                        <div><strong>アニメーションつきのチュートリアル</strong><p>? ボタンを押すと、番号つきの説明、操作する場所を示す枠、クリックの動きで、使い方を1ステップずつ案内します。Settings タブからも開けます。</p></div>
+                        <div><strong>アニメーションつきのチュートリアル</strong><p>? ボタンを押すと、番号つきの説明、操作する場所を示す枠、クリックの動きで、使い方を1ステップずつ案内します。「全般」ページからも開けます。</p></div>
                         <div><strong>同じ名前のデバイスも正しく区別</strong><p>Windowsでは、製品名が同じオーディオデバイスを取り違えることがよくあります。AudioSwitcherはWindows Core Audio API（pycaw経由）から各デバイス固有のIDを取得して区別するため、確実に目的のデバイスへ切り替わります。</p></div>
-                        <div><strong>Windowsの起動時に自動で常駐</strong><p>Settings タブでオンにすると、Windowsのスタートアップフォルダーに自分自身を登録します。Pythonスクリプトでも単体の.exeでも動作するので、サインインするたびにバックグラウンドで待機します。</p></div>
-                        <div><strong>英語と日本語に対応</strong><p>Settings タブの「Language / 言語」から表示言語を選べます。切り替えるとすぐに画面が変わり、保存前の入力内容もそのまま残ります。初期設定は英語です。</p></div>
+                        <div><strong>Windowsの起動時に自動で常駐</strong><p>「全般」ページでオンにすると、Windowsのスタートアップフォルダーに自分自身を登録します。Pythonスクリプトでも単体の.exeでも動作するので、サインインするたびにバックグラウンドで待機します。</p></div>
+                        <div><strong>英語と日本語に対応</strong><p>「全般」ページの「Language / 言語」から表示言語を選べます。切り替えるとすぐに画面が変わり、保存前の入力内容もそのまま残ります。初期設定は英語です。</p></div>
                     </div>
                             </div>
                             <section class="app-sec" id="included">
@@ -89,7 +97,7 @@
             <p>本サイトのツールは個人が開発したもので、無保証で提供しています。使用によって生じたデータの損失やシステムの不具合などについて、開発者は一切の責任を負いません。ご利用は自己責任でお願いします。</p>
             <div class="row"><a href="privacy.html">プライバシーポリシー</a><a href="https://github.com/CAIN218?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a><span>&copy; Gentlebit. All Rights Reserved.</span></div>
         </div></footer>
-        <script src="../assets/js/site.js?v=8"></script>
-        <script src="../assets/js/reveal.js?v=8"></script>
+        <script src="../assets/js/site.js?v=9"></script>
+        <script src="../assets/js/reveal.js?v=9"></script>
     </body>
 </html>
