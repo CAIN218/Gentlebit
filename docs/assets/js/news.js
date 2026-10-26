@@ -8,6 +8,13 @@
  */
 window.YUGALAB_NEWS = [
     {
+        date: "2026-10-26",
+        tag: "Site",
+        en: "Redesigned the whole website with a new look, and the Back links now return to the top page.",
+        ja: "サイト全体のデザインを一新しました。各ページの「戻る」はトップページに戻ります。",
+        link: null
+    },
+    {
         date: "2026-10-11",
         tag: "Lumina",
         en: "Released Lumina 1.1.0 with a refreshed design, a tray icon that adapts to your taskbar, automatic updates, and English/Japanese support.",
