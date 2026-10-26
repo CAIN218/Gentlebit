@@ -14,13 +14,22 @@
             if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
         });
     }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    var targets = [];
     groups.forEach(function (sel) {
         document.querySelectorAll(sel).forEach(function (n, i) {
             if (seen.indexOf(n) >= 0) return;
             seen.push(n);
             n.classList.add("rv");
             if (n.classList.contains("news-row") || n.matches(".app-more > div")) n.style.setProperty("--d", (i % 5) * 70 + "ms");
-            io.observe(n);
+            // Blocks already on screen at load come in one after another.
+            var r = n.getBoundingClientRect();
+            if (r.top < window.innerHeight) n.style.setProperty("--d", (200 + seen.length * 110) + "ms");
+            targets.push(n);
         });
+    });
+    // Apply the hidden state first and let it paint, so the fade-in actually transitions.
+    void document.body.offsetHeight;
+    requestAnimationFrame(function () {
+        requestAnimationFrame(function () { targets.forEach(function (n) { n.classList.add("rvt"); io.observe(n); }); });
     });
 })();
