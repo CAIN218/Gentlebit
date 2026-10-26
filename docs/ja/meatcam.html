@@ -25,63 +25,24 @@
         <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Pinyon+Script&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" />
         <link rel="stylesheet" href="../assets/css/site.css" />
-        <noscript><style>.global-header, .posts article, .project-card { opacity: 1 !important; transform: none !important; pointer-events: auto !important; }</style></noscript>
             <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"MeatCam","description":"MeatCam — 生焼けに見える部分を斜線で示し、色の見え方に関係なく焼き加減を判断できるiOSアプリ。","applicationCategory":"LifestyleApplication","operatingSystem":"iOS","inLanguage":"ja","url":"https://cain218.github.io/Gentlebit/ja/meatcam.html","author":{"@type":"Person","name":"Yuga Tanaka"}}</script>
     </head>
-    <body class="page-app">
-        <div id="custom-parallax-bg"></div>
-
-        <div id="wrapper">
-            <header class="global-header" id="global-header">
-                <a href="index.html" class="header-logo-svg-wrapper">
-                        <svg class="header-signature-svg" viewBox="0 0 160 45" xmlns="http://www.w3.org/2000/svg">
-                            <polygon points="5,12 12,6 19,12 12,18" fill="none" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round" />
-                            <path d="M 5,12 C -2,26 28,38 70,38 L 155,38" fill="none" stroke="url(#line-fade)" stroke-width="1" stroke-linecap="round" />
-                            <defs>
-                                <linearGradient id="line-fade" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stop-color="rgba(255,255,255,0.6)" />
-                                    <stop offset="70%" stop-color="rgba(255,255,255,0.25)" />
-                                    <stop offset="100%" stop-color="rgba(255,255,255,0)" />
-                                </linearGradient>
-                            </defs>
-                            <text x="23" y="32" class="signature-text-node">Gentlebit.</text>
-                        </svg>
-                    </a>
-                <div class="header-right">
-                    <nav class="header-links">
-                        <a href="index.html#news">News</a>
-                        <a href="index.html#apps">Apps</a>
-                        <a href="index.html#about">About</a>
-                        <a href="contact.html">Contact</a>
-                    </nav>
-                    <a href="../meatcam.html" class="lang-link" hreflang="en">English</a>
-                    <button class="menu-trigger-btn" id="menu-open" aria-label="Open menu"><span></span><span></span></button>
-                </div>
-            </header>
-
-            <nav class="side-nav" id="side-nav">
-                <button class="side-nav-close" id="menu-close" aria-label="メニューを閉じる">✕</button>
-                <div class="side-menu-list">
-                    <div class="side-menu-section">
-                        <span class="side-menu-category">Menu</span>
-                        <div class="side-menu-item"><a href="index.html" class="side-menu-link">Home</a></div>
-                        <div class="side-menu-item"><a href="index.html#news" class="side-menu-link">News</a></div>
-                        <div class="side-menu-item"><a href="index.html#about" class="side-menu-link">About</a></div>
-                        <div class="side-menu-item"><a href="contact.html" class="side-menu-link">Contact</a></div>
-                    </div>
-                    <div class="side-menu-section">
-                        <span class="side-menu-category">Apps</span>
-                        <div class="side-menu-item"><a href="lumina.html" class="side-menu-link">Lumina</a></div>
-                        <div class="side-menu-item"><a href="audioswitcher.html" class="side-menu-link">AudioSwitcher</a></div>
-                        <div class="side-menu-item"><a href="meatcam.html" class="side-menu-link">MeatCam <span class="nav-badge active">開発中</span></a></div>
-                    </div>
-                </div>
+    <body class="page-app page-sub">
+        <div class="bg" aria-hidden="true"></div>
+        <header class="top" id="top">
+            <a class="brand" href="index.html">Gentlebit</a>
+            <nav aria-label="Main">
+                <a href="index.html#news">News</a>
+                <a href="index.html#apps">Apps</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+                <span class="lg2" role="group" aria-label="Language"><a href="../meatcam.html" hreflang="en" lang="en">EN</a><a href="meatcam.html" hreflang="ja" lang="ja" aria-current="true">JP</a></span>
             </nav>
-
-            <div id="main">
-                <div class="app-page">
+        </header>
+        <main class="wrap sub">
+<div class="app-page">
                     <a href="index.html#apps" class="card-back-btn">← 戻る</a>
                     <div class="app-grid">
                         <aside class="app-side">
@@ -118,63 +79,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <footer id="custom-footer">
-                <a href="https://github.com/CAIN218?tab=repositories" class="footer-github-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
-                <div class="disclaimer-box"><p>本サイトのツールは個人が開発したもので、無保証で提供しています。使用によって生じたデータの損失やシステムの不具合などについて、開発者は一切の責任を負いません。ご利用は自己責任でお願いします。</p></div>
-                <a href="privacy.html" class="footer-privacy-link">プライバシーポリシー</a>
-                <div class="footer-copyright">&copy; Gentlebit. All Rights Reserved.</div>
-            </footer>
-        </div>
-
+        </main>
+        <footer class="site-footer"><div class="wrap">
+            <p>本サイトのツールは個人が開発したもので、無保証で提供しています。使用によって生じたデータの損失やシステムの不具合などについて、開発者は一切の責任を負いません。ご利用は自己責任でお願いします。</p>
+            <div class="row"><a href="privacy.html">プライバシーポリシー</a><a href="https://github.com/CAIN218?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a><span>&copy; Gentlebit. All Rights Reserved.</span></div>
+        </div></footer>
         <script src="../assets/js/site.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                var sideNav = document.getElementById('side-nav');
-                var header = document.getElementById('global-header');
-                var headerTriggered = false;
-
-                document.getElementById('menu-open').addEventListener('click', function() { sideNav.classList.add('open'); });
-                document.getElementById('menu-close').addEventListener('click', function() { sideNav.classList.remove('open'); });
-                document.addEventListener('click', function(e) { if (!sideNav.contains(e.target) && !document.getElementById('menu-open').contains(e.target)) sideNav.classList.remove('open'); });
-
-                var langDropdown = document.getElementById('lang-dropdown');
-                var langDropdownTrigger = document.getElementById('lang-dropdown-trigger');
-                if (langDropdown && langDropdownTrigger) {
-                    langDropdownTrigger.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                        langDropdown.classList.toggle('open');
-                    });
-                    document.addEventListener('click', function(e) {
-                        if (!langDropdown.contains(e.target)) langDropdown.classList.remove('open');
-                    });
-                }
-
-                function triggerHeader() {
-                    if (!headerTriggered && header) {
-                        headerTriggered = true;
-                        header.classList.add('show-header');
-                    }
-                }
-                setTimeout(triggerHeader, 100);
-
-                var parallaxBg = document.getElementById('custom-parallax-bg');
-                if (parallaxBg) {
-                    var updateBg = function() {
-                        var sTop = window.scrollY, dHeight = document.documentElement.scrollHeight - window.innerHeight;
-                        var ratio = dHeight > 0 ? sTop / dHeight : 0;
-                        parallaxBg.style.setProperty('background-position', 'center ' + (40 + (ratio * 20)) + '%', 'important');
-
-                        if (sTop > 0) {
-                            triggerHeader();
-                        }
-                    };
-                    updateBg();
-                    window.addEventListener('scroll', updateBg);
-                }
-                setTimeout(function() { var ca = document.querySelector('.project-card'); if (ca) ca.classList.add('show-card'); }, 50);
-            });
-        </script>
     </body>
 </html>
