@@ -10,6 +10,13 @@ window.YUGALAB_NEWS = [
     {
         date: "2026-10-26",
         tag: "Site",
+        en: "Changed the description on the top page.",
+        ja: "トップページの説明文を変更しました。",
+        link: null
+    },
+    {
+        date: "2026-10-26",
+        tag: "Site",
         en: "Updated the Privacy Policy, and the website now serves its own fonts instead of loading them from Google.",
         ja: "プライバシーポリシーを更新しました。あわせて、Webフォントをサイト自身から配信するようにしました（Googleからの読み込みをやめました）。",
         link: "privacy.html"
