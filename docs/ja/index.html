@@ -105,34 +105,10 @@
 
                 <section class="home-section" id="apps">
                     <h2 class="section-title">Apps</h2>
-                    <div class="home-apps">
-                        <a href="lumina.html" class="home-app">
-                            <div class="home-app-icon"><img src="../images/lumina-icon.svg" alt="" width="176" height="88" /></div>
-                            <div class="home-app-main">
-                                <h3>Lumina</h3>
-                                <p>複数モニターの明るさを、タスクバーのスライダーでまとめて調整できます。</p>
-                                <div class="home-app-facts"><span>Windows 10 / 11</span><span>v1.1.0</span></div>
-                            </div>
-                            <span class="home-app-go">詳細とダウンロード</span>
-                        </a>
-                        <a href="audioswitcher.html" class="home-app">
-                            <div class="home-app-icon"><img src="../images/audioswitcher-icon.svg" alt="" width="176" height="88" /></div>
-                            <div class="home-app-main">
-                                <h3>AudioSwitcher</h3>
-                                <p>スピーカーやヘッドセットなどの出力先を、ショートカットキーひとつで切り替えられます。</p>
-                                <div class="home-app-facts"><span>Windows 10 / 11</span><span>v1.7.2</span></div>
-                            </div>
-                            <span class="home-app-go">詳細とダウンロード</span>
-                        </a>
-                        <a href="meatcam.html" class="home-app">
-                            <div class="home-app-icon"><img src="../images/meatcam-icon.svg" alt="" width="176" height="88" /></div>
-                            <div class="home-app-main">
-                                <h3>MeatCam</h3>
-                                <p>カメラを向けるだけで、生焼けに見える部分を色ではなく斜線で示すiOSアプリです。</p>
-                                <div class="home-app-facts"><span>iOS</span><span class="is-dev">開発中</span></div>
-                            </div>
-                            <span class="home-app-go is-quiet">詳細を見る</span>
-                        </a>
+                    <div class="home-apps" id="home-apps" data-lang="ja" data-base="../">
+                        <div class="app-tabs" role="tablist"></div>
+                        <div class="app-pane" role="tabpanel"></div>
+                        <noscript><ul class="app-noscript"><li><a href="lumina.html">Lumina</a></li><li><a href="audioswitcher.html">AudioSwitcher</a></li><li><a href="meatcam.html">MeatCam</a></li></ul></noscript>
                     </div>
                 </section>
 
@@ -190,6 +166,8 @@
             })();
         </script>
         <script src="../assets/js/news.js"></script>
+        <script src="../assets/js/apps.js"></script>
+        <script src="../assets/js/home-apps.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 var sideNav = document.getElementById('side-nav');
