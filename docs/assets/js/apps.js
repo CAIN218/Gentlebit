@@ -26,7 +26,7 @@ window.GENTLEBIT_APPS = [
     },
     {
         id: "audioswitcher", name: "AudioSwitcher", icon: "audioswitcher-icon.svg", page: "audioswitcher.html",
-        meta: ["Version 1.8.0", "Windows 10 and 11 (64-bit)"],
+        meta: ["Version 1.8.1", "Windows 10 and 11 (64-bit)"],
         download: "https://github.com/CAIN218/audio-switcher/releases/latest", shot: "audioswitcher-hotkey.gif",
         en: {
             desc: "Switch the audio output, such as speakers and a headset, with one shortcut key. No need to open settings in the middle of a game or a call.",
