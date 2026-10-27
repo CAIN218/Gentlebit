@@ -10,6 +10,13 @@ window.YUGALAB_NEWS = [
     {
         date: "2026-10-27",
         tag: "AudioSwitcher",
+        en: "Released AudioSwitcher 1.8.3. Changing the theme now applies to open windows right away, the switch notification is smaller and quicker with smoother motion, and the update notice follows your language setting. Also fixed the previous device name getting cut off.",
+        ja: "AudioSwitcher 1.8.3 を公開しました。テーマを変えると開いている画面にすぐ反映され、切り替え通知は小さく速く、動きもなめらかになりました。「アップデートしました」の通知も言語設定に合わせて表示されます。前のデバイス名が途中で切れる不具合も修正しました。",
+        link: "audioswitcher.html"
+    },
+    {
+        date: "2026-10-27",
+        tag: "AudioSwitcher",
         en: "Released AudioSwitcher 1.8.2. The switch notification now shows the previous device and the new one on two lines, and changing the theme recolors it from the next notification.",
         ja: "AudioSwitcher 1.8.2 を公開しました。切り替え通知が、前のデバイスと切り替え先の2段表示になりました。テーマを変えると、次の通知から色が変わります。",
         link: "audioswitcher.html"
